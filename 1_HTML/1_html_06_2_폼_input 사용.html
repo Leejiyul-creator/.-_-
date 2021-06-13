@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>1_html_06_2_폼_input 사용</title>
+</head>
+
+<body>
+    <h2>form의 input 요소</h2>
+    <form>
+        <!--input 요소를 입력하기 위한 영역-->
+
+        <fieldset>
+            <!--fieldset은 form의 영역을 시각화-->
+            <legend>회원가입</legend>
+            <!--fieldset의 경계선에 제목-->
+
+            <p>아이디 : <input type="text" size="12" maxlength="9" placeholder="영문8자"></p>
+            <p>비밀번호 : <input type="password" size="12" maxlength="9" placeholder="영문~숫자 8자"></p>
+            <p>메일 수신 여부 : <input type="radio" name="email" value="y">예 <input type="radio" name="email" value="n">아니오</p>
+            <p>관심 분야 : <input type="checkbox" name="html" value="html">HTML <input type="checkbox" name="css" value="css">CSS <input type="checkbox" name="Jqurey" value="JQurey">JQurey</p>
+            <p>파일 올리기 : <input type="file"></p>
+            <p><input type="submit" value="전송"></p>
+            <p><input type="reset" value="취소"></p>
+            <p><input type="button" value="확인"></p>
+            <p><input type="image" src="search.gif" alt="검색 버튼"></p>
+            <!--src로 image 삽입-->
+        </fieldset>
+
+    </form>
+
+
+
+</body></html>

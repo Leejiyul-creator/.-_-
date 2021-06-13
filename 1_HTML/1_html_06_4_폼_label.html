@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>1_html_06_4_폼_label</title>
+</head>
+
+<body>
+    <h2>label 요소
+        <!-- p.136-->
+    </h2>
+    <p>1. label태그로 input태그를 감싼다.</p>
+    <p>2. input태그의 id와 label 태그의 for 속성을 이용하여 연결 - 권장 </p>
+
+
+    <form action="join-php" method="post">
+        <!--action은 보안프로그램 등, 프로그래머가 지정-->
+        <!--method는 웹서버의 데이터 전송방법, 프로그래머가 지정-->
+        <fieldset>
+            <legend>회원가입</legend>
+            <table border="1">
+                <tr>
+                    <th scope="row"><label for="name">이름</label>
+                        </th>
+                        <!--label은 input 요소의 이름표-->
+                    <td><input id="name" type="text" size="20" maxlength="12" placeholder="실명 입력"></td>
+                </tr>
+
+                <tr>
+                    <th scope="row"><label for="id">아이디</label></th>
+                    <td><input type="text" id="id"size="20" maxlength="12" placeholder="영문 12자 이내"></td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="password">비밀번호</label></th>
+                    <td><input type="text" id="password" size="20" maxlength="12" placeholder="영문~숫자 12자"></td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="pw_!">비밀번호 확인</label></th>
+                    <td><input  type="text" id="pw_!" size="20" maxlength="12" placeholder="비밀번호와 동일"></td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="email">이메일</label></th>
+                    <td><input id="email" type="text">@
+                        <select>
+                            <option>naver.com</option>
+                            <option>daum.net</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="mobile">핸드폰</label></th>
+                    <td><input id="mobile" type="text"></td>
+                </tr>
+
+            </table>
+
+            <p><input type="submit" value="전송"> <input type="reset" value="취소"></p>
+
+
+
+
+        </fieldset>
+
+
+    </form>
+
+
+</body></html>

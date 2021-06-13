@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>1_html_06_3_폼_textname-select</title>
+</head>
+
+<body>
+    <h2>textarea요소와 select요소</h2>
+    <form>
+        <fieldset>
+            <legend>여러 줄 글상자와 목록상자</legend>
+            <p>답글<br><textarea cols="45px" rows="5px"></textarea></p>
+            <!--cols는 가로폭, row는 세로높이-내용이 row의 크기를 넘으면 스크롤바가 자동으로 생성이 됨.-->
+
+            <p>과목 선택
+            <select>
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>Javascript</option>
+                <option>jQurey</option>
+            </select>
+            </p>
+
+            <p>개강일
+            <select>
+                <optiongroup label="6월">
+                    <option>6월 13일</option>
+                    <option>6월 14일</option>
+                </optiongroup>
+            </select>
+                <select>
+                    <optiongroup label="7월">
+                        <option>7월 13일</option>
+                        <option>7월 14일</option>
+                    </optiongroup>
+                </select>
+                </p> 
+
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
