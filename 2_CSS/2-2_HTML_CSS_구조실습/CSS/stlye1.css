@@ -1,0 +1,47 @@
+@charset "UTF-8"
+/* 주석처리 */
+/*** 전체 설정 ***/
+/* 별(*)은 모든 요소 */
+
+
+* {
+    margin: 0;
+    /* 외부여백 */
+    margin: 0;
+    /* 내부여백 */
+}
+
+#wrap {
+    width: 100%
+}
+
+#header {
+    width: 1000px;
+    height: 200px;
+    background-color: aliceblue
+}
+
+#contentwrap {
+    width: 1000px;
+    height: 400px;
+    background-color: lavenderblush
+}
+
+
+#footer {
+    width: 1000px;
+    height: 150px;
+    background-color: plum
+}
+
+/* color 옆에서 control+E : 색상 선택 */
+
+/*** header ***/
+
+/*** contentwrap ***/
+
+/*** 브라켓 고유기능 : 태그선택 + control + E : css link 연결 ***/
+#left_lnb {
+    width: 300px
+        height: 
+}

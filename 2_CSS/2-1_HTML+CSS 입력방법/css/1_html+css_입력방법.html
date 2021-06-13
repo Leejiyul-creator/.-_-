@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>1_html+css_입력방법.html</title>
+    <style type="text/css">
+        .internal {
+            color: aquamarine;
+        }
+    </style>
+    <link 
+    href="css/link.css"
+    rel="stylesheet" 
+    type="text/css">
+
+</head>
+
+<body>
+
+    <h1>html+css 입력방법</h1>
+    <p>선택자 {속성: 속성값;}</p>
+    <br>
+    <h2>css 입력 방법</h2>
+    <p></p>
+    <br>
+    <h2>선택자 유형</h2>
+    <ol>
+        <li>type(태그) - '태그명'을 그대로 입력</li>
+        <li>class - '.' + '클래스명'을 입력</li>
+        <li>id - '#' + '아이디명'을 입력</li>
+        <li>복합</li>
+    </ol>
+
+    <p>선택자는 주체적일수록 우선순위가 높다.</p>
+    <br>
+    <h2>CSS를 HTML에 적용시키는 방법</h2>
+    <h3 style="color: red">1. Inline Style Sheet</h3>
+    <p>html 문서 안에 style 속성을 직접 입력하는 방식
+        <br>- css 내용이 매우 적을 때 사용<br>- 우선 순위 높음
+    </p>
+    <h3 class="internal">2. Internal Style Sheet</h3>
+    <p>HTML 문서 HEAD 태그 안에 style 태그를 삽입
+        <br>- 간단한 문서에 사용<br>- style 태그에 type 속성을 입력
+    </p>
+    <h3 link="link">3. Linking Style Sheet</h3>
+    <p>별도의 css파일을 작성하여 HTML문서와 연결<br>- head 태그 안에 link 태그를 입력한 후 href, rel, type 속성을 지정<br>(가장 일반적인 방법)</p>
+
+
+</body>
+
+</html>
