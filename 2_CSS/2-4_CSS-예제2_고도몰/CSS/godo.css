@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+/*** 브라우저 초기화 및 전체 설정 ***/
+* {
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+li {
+    list-style: none;
+    float: left;
+}
+
+a {
+    text-decoration: none;
+    /*글자의 장식 제거*/
+}
+
+
+
+
+/* header */
+#header {
+    width: 1100px;
+    height: 132px;
+    margin-top: 40px;
+}
+
+#top {
+    width: 1110px;
+    height: 52px;
+    margin-bottom: 38px;
+}
+
+#top > div {
+    float: left;
+}
+
+#logo {
+    width: 253px;
+    height: 52px;
+}
+
+#header_right {
+    width: 857px;
+    height: 52px;
+}
+
+#gnb {
+    float: right;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+#gnb a {
+    padding: 0 10px;
+}
+
+#lnb {
+    width: 1100px;
+    height: 40px;
+    border: 1px solid gray;
+    border-bottom: 1px solid black;
+}
+
+#lnb li {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+/* 글자 1행일 때 높이 설정 기능도 수행    */
+}
+
+#lnb a {
+    padding: 0 15px;
+    line-height: 40px;
+    display: block;
+}
+
+
+/* contentwrap */
+#contentwrap {
+    width: 1100px;
+    height: 922px;
+    background-color border-bottom: 1px solid #000;
+}
+
+#main_banner {
+    width: 1100px;
+    height: 393px;
+    background-color: yellow;
+    border-bottom: 4px solid black;
+}
+
+
+#banner {
+    width: 1100px;
+    height: 130px;
+    margin-top: 20px;
+    background-color: green;
+}
+
+#best {
+    width: 1100px;
+    height: 334px;
+    margin-top: 20px;
+    background-color: blue;
+}
+
+/* footer */
+#footer {
+    width: 1100px;
+    height: 100px;
+}
+
+#footer > div {
+    float: left;
+}
+
+#bottom_logo {
+    width: 253px;
+    height: 70px;
+    background-color: purple;
+    margin-top: 30px;
+}
+
+#footer_right {
+    width: 857px;
+    height: 100px;
+    background-color: black;
+}
+
+#fnb {
+    width: 857px;
+    height: 30px;
+    background-color: palevioletred;
+
+}
+
+#address {
+    width: 857px;
+    height: 70px;
+    background-color: gray;
+}

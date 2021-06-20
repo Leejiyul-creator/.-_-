@@ -1,0 +1,335 @@
+@charset "utf-8";
+
+/*** 브라우저 초기화 및 전체 설정 ***/
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /*문자 가로 정렬: 중앙 정렬*/
+  color: #0cf;
+  /* 글자색 */
+}
+
+li {
+  list-style: none;
+  /* 숫자, 점 등 목록의 장식 제거 */
+  float: left;
+  /* 왼쪽으로 이어붙이기 */
+}
+
+/* 2개 이상의 선택자를 작성할 때에는 콤마(,)로 구분 */
+h1,
+h2 {
+  height: 100%;
+}
+
+a {
+  display: block;
+  /* 크기를 설정할 수 없는 인라인태그에 크기를 설정하기 위해 블록태그로 변환 */
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  /* 밑줄 등 글자의 장식 제거 */
+}
+
+a:hover {
+  color: #aaa;
+}
+
+#wrap {
+  width: auto;
+  /*최상위 요소의 auto는 100%와 같음*/
+  background-image: url(../images/00_line.png);
+  /*영역보다 작은 크기의 이미지를 연결하면 자동반복*/
+  background-repeat: repeat-x;
+  /* 배경이미지 반복: 가로만 반복 */
+}
+
+
+/*** header ***/
+#header {
+  width: 1000px;
+  height: 120px;
+  margin: 0 auto;
+  /* 블록요소의 가로 중앙정렬 방법 (auto는 균등분할) */
+}
+
+/*#header 직계 하위 div*/
+#header > div {
+  float: left;
+}
+
+#header_left {
+  width: 400px;
+  height: 120px;
+}
+
+#left_top {
+  width: 400px;
+  height: 60px;
+}
+
+#left_lnb {
+  width: 400px;
+  height: 60px;
+}
+
+#left_lnb li {
+  width: 80px;
+  height: 60px;
+  background-image: url(../images/01_menu_left.jpg);
+  text-indent: -9999px;
+}
+
+.left1 {
+  background-position: 0 0;
+}
+
+.left1:hover {
+  background-position: 0 -60px;
+}
+
+.left2 {
+  background-position: -80px 0;
+}
+
+.left2:hover {
+  background-position: -80px -60px;
+}
+
+.left3 {
+  background-position: -160px 0;
+}
+
+.left3:hover {
+  background-position: -160px -60px;
+}
+
+.left4 {
+  background-position: -240px 0;
+}
+
+.left4:hover {
+  background-position: -240px -60px;
+}
+
+.left5 {
+  background-position: -320px 0;
+}
+
+.left5:hover {
+  background-position: -320px -60px;
+}
+
+#logo {
+  width: 204px;
+  height: 120px;
+}
+
+#logo a {
+  background-image: url(../images/02_top_logo.jpg);
+  /* 이미지를 연결하는 방법 - 반드시 크기 설정 */
+  /* url에서 상위 폴더로 나가기 위해 (../) 입력 */
+  text-indent: -9999px;
+  /* 글자의 시각적 위치만 왼쪽으로 이동 */
+}
+
+/* 사용자 동작에 반응하는 가상 클래스 - P.437 */
+/*
+태그명:link - 하이퍼링크 속성이 적용된 태그의 스타일(태그의 설정과 같아서 주로 생략)
+태그명:hover - 태그를 마우스오버 했을 때의 스타일
+태그명:active - 태그를 클릭한 상태(누르고 있을 때)의 스타일
+태그명:focus - (탭키 등으로) 태그를 활성화 했을 때의 스타일
+태그명:visited - 하이퍼링크 속성이 적용된 태그를 클릭하여 방문하고 돌아왔을 때의 스타일
+*/
+#logo a:hover {
+  background-position: 0 -120px;
+  /* 배경이미지 위치: X값 Y값 */
+}
+
+#header_right {
+  width: 396px;
+  height: 120px;
+}
+
+#right_top {
+  width: 396px;
+  height: 60px;
+}
+
+#gnb {
+  float: right;
+  /* 오른쪽으로 이어붙이기 */
+  margin-top: 10px;
+}
+
+#gnb ul {
+  border-right: 2px solid #0cf;
+  height: 15px;
+}
+
+#gnb li {
+  border-left: 2px solid #0cf;
+  width: 64px;
+  height: 15px;
+  font-size: 10px;
+  line-height: 15px;
+  /* 글자 세로 중앙 정렬 */
+}
+
+#right_lnb {
+  width: 396px;
+  height: 60px;
+}
+
+#right_lnb li {
+  width: 66px;
+  height: 60px;
+  background-image: url(../images/03_menu_right.jpg);
+  text-indent: -9999px;
+}
+
+.right1 {
+  background-position: 0 0;
+}
+
+.right1:hover {
+  background-position: 0 -60px;
+}
+
+.right2 {
+  background-position: -66px 0;
+}
+
+.right2:hover {
+  background-position: -66px -60px;
+}
+
+.right3 {
+  background-position: -132px 0;
+}
+
+.right3:hover {
+  background-position: -132px -60px;
+}
+
+.right4 {
+  background-position: -198px 0;
+}
+
+.right4:hover {
+  background-position: -198px -60px;
+}
+
+.right5 {
+  background-position: -264px 0;
+}
+
+.right5:hover {
+  background-position: -264px -60px;
+}
+
+.right6 {
+  background-position: -330px 0;
+}
+
+.right6:hover {
+  background-position: -330px -60px;
+}
+
+
+/*** contentwrap ***/
+#contentwrap {
+  width: 1000px;
+  height: 667px;
+  margin: 0 auto;
+  /* 블록요소의 가로 중앙정렬 */
+}
+
+
+
+/*** footer ***/
+#footer {
+  width: 100%;
+  height: 100px;
+  background-image: url(../images/99_bottom_line.png);
+  background-repeat: repeat-x;
+}
+
+#fnb {
+  width: 1000px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+#fnb li {
+  width: 200px;
+  height: 50px;
+  text-indent: -9999px;
+  background-image: url(../images/99_bottom_logo.jpg);
+}
+
+.fnb1 {
+  background-position: 0 0;
+}
+
+.fnb1:hover {
+  background-position: 0 -50px;
+}
+
+.fnb2 {
+  background-position: -200px 0;
+}
+
+.fnb2:hover {
+  background-position: -200px -50px;
+}
+
+.fnb3 {
+  background-position: -400px 0;
+}
+
+.fnb3:hover {
+  background-position: -400px -50px;
+}
+
+.fnb4 {
+  background-position: -600px 0;
+}
+
+.fnb4:hover {
+  background-position: -600px -50px;
+}
+
+.fnb5 {
+  background-position: -800px 0;
+}
+
+.fnb5:hover {
+  background-position: -800px -50px;
+}
+
+
+#address {
+  width: 1000px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+#address a {
+  display: inline;
+  /* 인라인요소는 크기 적용 불가 */
+}
+
+#address address {
+  font-style: normal;
+  /* 글자의 기울기 제거 */
+  font-size: 12px;
+  line-height: 1.5;
+  /* 행간: 단위는 px,% 등 사용가능(단위를 쓰지 않은 경우는 배수) */
+}
+
+small {
+  font-size: 100%;
+  /* small의 기본설정은 약85% */
+}    

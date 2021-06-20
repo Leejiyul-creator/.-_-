@@ -1,0 +1,181 @@
+@charset "uft-8";
+
+/***브라우저 초기화 및 전체 설정***/
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+}
+
+
+li {
+    list-style: none;
+    float: left;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+#wrap {
+    width: 100%;
+}
+
+
+/*** header ***/
+#header {
+    width: 1000px;
+    height: 120px;
+    background-color: orangered;
+}
+
+/* header의 직계 하위 */
+
+#header > div {
+    float: left;
+}
+
+#header_left {
+    width: 400px;
+    height: 120px;
+    background-color: orangered;
+    float: left
+}
+
+#left_top {
+    width: 400px;
+    height: 60px;
+    background-color: darkred;
+    float: left;
+}
+
+#left_lnb {
+    width: 400px;
+    height: 60px;
+}
+
+#left_lnb li {
+    border: 1px solid white;
+    width: 78px;
+    height: 58px;
+    line-height: 60px;
+}
+
+#left_lnb li a {
+    background-color: black;
+    display: block;
+    width: 100%;
+    /*인라인 태그이기 때문에 블록태그와 달리 크기가 모두 적용되지 않음. 속성 변경 해주어야한다.*/
+    height: 100%;
+}
+
+
+#logo {
+
+    width: 204px;
+    height: 120px;
+    background-color: red;
+    float: left;
+}
+
+#header_right {
+    width: 396px;
+    height: 120px;
+}
+
+#right_top {
+    width: 396px;
+    height: 60px;
+    background-color: darkred;
+    float: right;
+}
+
+#gnb {
+    width: 396px;
+    height: 60px;
+    }
+
+#gnb li {
+    border: 1px solid white;
+    width: 97px;
+    height: 60px;
+    line-height: 60px;
+
+}
+
+#gnb li a {
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+#right_lnb {
+    width: 396px;
+    height: 60px;
+    background-color: orangered;
+    float: right;
+}
+
+#right_lnb li {
+    border: 1px solid white;
+    width: 66px;
+    height: 60px;
+    line-height: 60px;
+}
+
+#right_lnb li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*** contentwrap ***/
+#contentwrap {
+    width: 1000px;
+    height: 667px;
+    background-color: green;
+}
+
+/*** footer ***/
+#footer {
+    width: 1000px;
+    height: 100px;
+    background-color: blue;
+}
+
+
+#fnb {
+    width: 1000px;
+    height: 50px;
+    background-color: blue;
+}
+
+#fnb li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#fnb li {
+    border: 1px solid white;
+    width: 198px;
+    height: 48px;
+    line-height: 50px;
+    /*행간 글자가 1행일 때 height 동일하게 적용하면 세로 중앙 정렬*/
+    float: right;
+}
+
+
+#address {
+    width: 1000px;
+    height: 50px;
+    background-color: navy;
+    float: left;
+    font-style: normal;
+    /*글자의 기울기 취소*/
+}
