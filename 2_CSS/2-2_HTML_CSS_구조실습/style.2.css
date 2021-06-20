@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+/***브라우저 초기화 및 전체 설정***/
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+
+}
+
+li {
+    list-style: none;
+    /*점, 숫자 등 목차의 장식을 제거*/
+    /*기본적으로 li의 앞에는 점이 있다.*/
+
+    float: left;
+    /*왼쪽으로 이어붙이기*/
+
+    margin: 0 10px;
+    /*외부여백*/
+    /*값을 1개 입력하면 4방향 공통적용, 2개 입력하면 1상ㅏ하 2좌우*/
+}
+
+
+#wrap {
+    width: 100%;
+}
+
+/*** header ***/
+#header {
+    width: 1000px;
+    height: 200px;
+    background-color: red;
+}
+
+#top {
+    width: 1000px;
+    height: 150px;
+    background-color: #bf4545;
+}
+
+
+#logo {
+    width: 300px;
+    height: 150px;
+    background-color: #fd0000;
+    float: left;
+}
+
+#right {
+    width: 700px;
+    height: 150px;
+    background-color: #b52c2c;
+    float: left;
+}
+
+/*복합선택자 -띄어쓰기는 하위(자손) . (>)는 직계자손*/
+
+#rigth ul {
+    float: right;
+}
+
+#lnb {
+    width: 1000px;
+    height: 50px;
+    background-color: #cc0606;
+
+}
+
+
+/*** contentwrap ***/
+#contetntwrap {
+    width: 1000px;
+    height: 400px;
+    background-color: green;
+}
+
+#main_banner {
+    width: 1000px;
+    height: 200px;
+    background-color: green;
+}
+
+#banner {
+    width: 1000px;
+    height: 50px;
+    background-color: limegreen;
+}
+
+#best {
+    width: 1000px;
+    height: 100px;
+    background-color: yellowgreen;
+}
+
+
+/*** footer ***/
+#footer {
+    width: 1000px;
+    height: 150px;
+    background-color: blue;
+}
+
+#bottom_logo {
+    width: 300px;
+    height: 200px;
+    background-color: blue;
+    float: left;
+}
+
+#fnb {
+    width: 700px;
+    height: 50px;
+    background-color: darkblue;
+    float: right;
+}
+
+
+#address {
+    width: 700px;
+    height: 150px;
+    background-color: mediumblue;
+    float: right
+}
