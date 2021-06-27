@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/*주석처리*/
+/***브라우저 초기화 및 전체설정***/
+
+/*모든요소 {*}*/
+
+* {
+    margin: 0;
+    /*외부여백*/
+    padding: 0;
+    /*내부여백*/
+    color: white;
+    /*font-size- 기본 16px을 기준으로 하며 요소별 차용*/
+}
+
+li {
+    list-style: none;
+    /*점, 숫자 등 목차의 장식을 제거*/
+    /*기본적으로 li의 앞에는 점이 있다.*/
+
+    float: left;
+    /*왼쪽으로 이어붙이기*/
+
+    margin: 10px;
+    /*외부여백*/
+}
+
+
+
+#wrap {
+    width: 100%;
+}
+
+
+/*** header ***/
+#header {
+    width: 1000px;
+    /*가로 폭*/
+    height: 200px;
+    /*세로 높이*/
+    background-color: red;
+    /*배경색 : #숫자6자 원칙 (색상이름 사용가능)*/
+}
+
+#left_lnb {
+    width: 400px;
+    height: 200px;
+    background-color: crimson;
+    float: left;
+    /*왼쪽으로 이어붙이기-가로분할 요소에 모두 설정*/
+}
+
+#logo {
+    width: 200px;
+    height: 200px;
+    background: darkred;
+    float: left;
+    /*왼쪽으로 이어붙이기-가로분할 요소에 모두 설정*/
+
+}
+
+#right_lnb {
+    width: 400px;
+    height: 200px;
+    background: crimson;
+    float: left;
+}
+
+/*** contentwrap ***/
+#contentwrap {
+    width: 1000px;
+    height: 400px;
+    background-color: green;
+    clear: both;
+    /*다음 요소에까지 영향을 미치는 float:left 속성을 끊기-앞의 요소에 height 속성이 있으면 불필요*/
+}
+
+#mainevent {
+    width: 1000px;
+    height: 300px;
+    background-color: darkgreen;
+}
+
+#channer {
+    width: 1000px;
+    height: 100px;
+    background-color: yellowgreen;
+}
+
+/*** footer ***/
+#footer {
+    width: 1000px;
+    height: 150px;
+    background-color: blue;
+}
+
+#bottom_logo {
+    width: 300px;
+    height: 150px;
+    background-color: skyblue;
+    float: left;
+}
+
+#address {
+    width: 700px;
+    height: 150px;
+    background-color: blue;
+    float: left;
+}
+
+/* color 옆에서 control+E : 색상 선택 */
+
+/*** header ***/
+
+/*** contentwrap ***/
+
+/*** 브라켓 고유기능 : 태그선택 + control + E : css link 연결 ***/

@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.trans {
+    width: 1200px;
+}
+
+.trans > li {
+    width: 200px;
+    height: 200px;
+    background-color: #ddd;
+    list-style: none;
+    float: left;
+    margin: 20px;
+}
+
+h3 {
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.note {
+    margin: 10px 10px 10px 30px;
+    font-size: 12px;
+    line-height: 1.5
+}
+
+.translate:hover {
+    transform: translate(100px, 100px);
+}
+
+.rotate:hover {
+    transform: rotate(-30deg);
+}
+
+.scale:hover {
+    transform: scale(1,2)
+}
+
+.skew:hover {
+    transform: skew(-30deg)
+}

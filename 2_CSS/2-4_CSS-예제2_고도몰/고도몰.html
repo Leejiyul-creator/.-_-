@@ -9,22 +9,33 @@
 
 <body>
     <div id="wrap">
-        <div id="skipnav"></div>
+        <div id="skipnav" class="hidden">
+            <h3>영역별 바로 가기</h3>
+            <ul>
+                <li><a href="#lnb">주 메뉴 바로 가기</a></li>
+                <li><a href="#main_banner">메인 배너 바로 가기</a></li>
+                <li><a href="#banner">배너 모음 바로 가기</a></li>
+                <li><a href="#best">베스트 상품 바로 가기</a></li>
+                <li><a href="#fnb">하단 기업정보 바로 가기</a></li>
+            </ul>
+        </div>
 
         <div id="header">
             <div id="top">
-                <div id="logo"><img src="images/logo.gif"></div>
+                <div id="logo"><img src="images/logo.gif" alt="로고"></div>
                 <div id="header_right">
+                    <h3 class="hidden">회원가입 메뉴</h3>
                     <ul id="gnb">
-                        <li><a href="">로그인</a></li>
+                        <li class="first"><a href="">로그인</a></li>
                         <li><a href="">회원가입</a></li>
                         <li><a href="">마이페이지</a></li>
                         <li><a href="">장바구니</a></li>
-                        <li><a href="">주문/배송</a></li>
+                        <li class="last"><a href="">주문/배송</a></li>
                     </ul>
                 </div>
             </div>
             <div id="lnb">
+                <h3 class="hidden">주 메뉴</h3>
                 <ul>
                     <li><a href="">HAND CARE</a></li>
                     <li><a href="">BATH&#38;BODY</a></li>
@@ -38,43 +49,50 @@
         </div>
         <div id="contentwrap">
             <div id="main_banner">
-                <ul>
-                    <li><a href="">main_banner-1</a></li>
-                    <li><a href="">main_banner-2</a></li>
-                    <li><a href="">main_banner-3</a></li>
-                    <li><a href="">main_banner-4</a></li>
-                    <li><a href="">main_banner-5</a></li>
-                </ul>
+                <h3 class="hidden">banner 모음</h3>
+                <img src="images/main_img.jpg" alt=""><a href=""></a>
             </div>
             <div id="banner">
-                <li><a href="">banner-1</a></li>
-                <li><a href="">banner-2</a></li>
-                <li><a href="">banner-3</a></li>
+                <h3 class="hidden">배너</h3>
+                    <ul>
+                        <li class="mar10"><a href=""><img src="images/banner_01.jpg" alt="맞춤제작 배너"></a></li>
+                        <li class="mar10"><a href=""><img src="images/banner_02.jpg" alt="평생수선 보정 배너"></a></li>
+                        <li class="mar10"><a href=""><img src="images/banner_03.jpg" alt="무료배송 배너"></a></li>
+                        <li class="no_margin"><a href=""><img src="images/banner_04.jpg" alt="포토생성 배너"></a></li>
+                    </ul>
             </div>
-            <div id="best"></div>
+            <div id="best">
+                <h3><strong>BEST</strong> PRODUCT</h3>
+                <ul>
+                    <li class="mar17"><a href=""><img src="images/product_01.jpg" alt="베스트상품-1"></a></li>
+                    <li class="mar16"><a href=""><img src="images/product_02.jpg" alt="베스트상품-1"></a></li>
+                    <li class="mar17"><a href=""><img src="images/product_03.jpg" alt="베스트상품-1"></a></li>
+                    <li class="no_margin"><a href=""><img src="images/product_04.jpg" alt="베스트상품-1"></a></li>
+                </ul>
+            </div>
         </div>
         <div id="footer">
-            <div id="bottom_logo"></div>
+            <div id="bottom_logo"><img src="images/bottom_logo.gif" alt=""></div>
             <div id="footer_right">
                 <div id="fnb">
+                    <h3 class="hidden">하단 기업정보 메뉴</h3>
                     <ul>
-                        <li><a href="">회사소개</a></li>
-                        <li><a href="">이용약관</a></li>
-                        <li><a href="">개인정보취급방침</a></li>
-                        <li><a href="">이용안내</a></li>
-                        <li><a href="">광고/제휴 문의</a></li>
+                        <li class="pad_r"><a href="">회사소개</a></li>
+                        <li class="pad_l pad_r"><a href="">이용약관</a></li>
+                        <li class="pad_l pad_r"><a href="">개인정보취급방침</a></li>
+                        <li class="pad_l pad_r"><a href="">이용안내</a></li>
+                        <li class="pad_l"><a href="">광고/제휴 문의</a></li>
                     </ul>
                 </div>
                 <div id="address">
-                    <address>상호명 : 디자인교과서 &#124; 166; 대표 : 서수정 &#124; 주소 : 서울 서초구 방배동 세양아르비체
-                        메일 : help@design-book.co.kr &#124;; 통신판매업신고번호 : 00000000000 &#124; 사업자등록번호 : 000-00-00000
-                        대표번호 : 000-000-0000 &#124; 팩스번호 : 000-000-0000 &#124; 개인정보관리자 : 아무개
-                        <small>copyright 2019. design-book.co.kr all rights reserved.</small>
-                    </address>
+                    <address>상호명 : 디자인교과서 &#124; 대표 : 서수정 &#124; 주소 : 서울 서초구 방배동 세양아르비체<br>
+                        메일 : <a href="">help@design-book.co.kr</a> &#124; 통신판매업신고번호 : 00000000000 &#124; 사업자등록번호 : 000-00-00000
+                        대표번호 : 000-000-0000 &#124; 팩스번호 : 000-000-0000 &#124; 개인정보관리자 : 아무개</address><small>copyright 2019. design-book.co.kr all rights reserved. </small>
                 </div>
             </div>
         </div>
     </div>
+
 
 </body>
 

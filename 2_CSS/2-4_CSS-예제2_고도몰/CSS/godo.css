@@ -4,33 +4,48 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
     color: #000;
 }
 
 li {
-    list-style: none;
     float: left;
+    list-style: none;
 }
 
-a {
-    text-decoration: none;
-    /*글자의 장식 제거*/
+a:hover {
+    color: #ff0000;
+}
+
+/*** skipnav 설정(제자리에서 시각정보만 차단) ***/
+.hidden {
+    visibility: hidden;
+    /*시각적으로 안보이게 함*/
+    width: 0;
+    height: 0;
+    /*공간을 차아지 않도록 함*/
+    overflow: hidden;
+    /*영역을 벗어난 요소가 보이지 않도록 함    */
+    font-size: 0;
+    line-height: 0;
+    /*가상의 공간도 차지하지 않도록 함*/
+    /*글자크기에 의한 공간설정 0*/
+
+
 }
 
 
 
-
-/* header */
+/*** hader ***/
 #header {
-    width: 1100px;
+    width: 100%;
     height: 132px;
-    margin-top: 40px;
 }
 
 #top {
+    margin: 38px auto;
     width: 1110px;
     height: 52px;
-    margin-bottom: 38px;
 }
 
 #top > div {
@@ -49,95 +64,196 @@ a {
 
 #gnb {
     float: right;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
 }
 
 #gnb a {
-    padding: 0 10px;
+    padding: 10px;
+    font-size: 12px;
 }
+
+#gnb .first {
+    border: none;
+}
+
+#gnb .first a {
+    padding-left: 0;
+}
+
+#gnb .last a {
+    padding-right: 0;
+}
+
+#gnb li {
+    border-left: 1px solid #ddd;
+}
+
 
 #lnb {
-    width: 1100px;
+    width: 100%;
     height: 40px;
-    border: 1px solid gray;
-    border-bottom: 1px solid black;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
-#lnb li {
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-/* 글자 1행일 때 높이 설정 기능도 수행    */
+#lnb ul {
+    width: 1110px;
+    margin: 0 auto;
 }
 
 #lnb a {
     padding: 0 15px;
-    line-height: 40px;
     display: block;
+    /*크기 지정을 위해 block 요소로 변환 (인라인 요소는 크기 설정이 불가능하다.)*/
+    line-height: 40px;
+    font-weight: bold;
 }
 
 
-/* contentwrap */
+/*상단외곽선 : 두께 종류 색상*/
+
+
+/*** contentwrap ***/
 #contentwrap {
-    width: 1100px;
+    width: 100%;
     height: 922px;
-    background-color border-bottom: 1px solid #000;
+    border-bottom: 1px solid #000;
+
 }
 
 #main_banner {
-    width: 1100px;
+    width: 100%;
     height: 393px;
-    background-color: yellow;
-    border-bottom: 4px solid black;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    background-position: center;
 }
+
+#main_banner a {
+    display: block;
+    min-width: 100%;
+    /*최소넓이 지정 (기본 넓이는 100%로 지정됨)*/
+    height: 100%;
+    text-indent: -9999px;
+    /*글자의 시각 정보만 왼족 긑으로 이동*/
+}
+
+/*
+앞의 3개의 li에만 margin을 적용 시 4번 째 li에 margin0 설정이 불필요
+.mar10 {
+    margin-right: 10px;
+}
+*/
 
 
 #banner {
-    width: 1100px;
+    width: 1110px;
     height: 130px;
-    margin-top: 20px;
-    background-color: green;
+    margin: 20px auto;
 }
+
+#banner > ul > li {
+    margin-right: 10px;
+}
+
+#banner > ul > li.no_margin {
+    margin: 0;
+}
+
+
 
 #best {
-    width: 1100px;
+    width: 1110px;
     height: 334px;
-    margin-top: 20px;
-    background-color: blue;
+    margin: 20px auto;
 }
 
-/* footer */
+#best > h3 {
+    font-weight: normal;
+    /*글자두께 : 보통*/
+    height: 30px;
+}
+
+.mar17 {
+    margin-right: 17px;
+}
+
+.mar16 {
+    margin-right: 16px;
+}
+
+.no_marign {
+    margin: 0px;
+}
+
+
+/*** footer ***/
 #footer {
-    width: 1100px;
-    height: 100px;
+    width: 1110px;
+    height: 120px;
+    margin: 0 auto;
 }
 
 #footer > div {
     float: left;
 }
 
+
 #bottom_logo {
     width: 253px;
-    height: 70px;
-    background-color: purple;
+    height: 90px;
     margin-top: 30px;
 }
 
+
 #footer_right {
     width: 857px;
-    height: 100px;
-    background-color: black;
+    height: 120px;
 }
 
 #fnb {
     width: 857px;
     height: 30px;
-    background-color: palevioletred;
-
 }
+
+#fnb a {
+    display: block;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
 
 #address {
     width: 857px;
     height: 70px;
-    background-color: gray;
+    font-size: 12px;
+    font-style: normal;
+    /* 글자 기울기 제거   */
+}
+
+#address a {
+    font-weight: bold;
+}
+
+.pad_l a {
+    padding-left: 10px;
+}
+
+.pad_r a {
+    padding-right: ;
+    10px;
+}
+
+address {
+    font-style: normal;
+    /* 글자 기울기 제거 */
+    /*fonts-style은 따로 address, small 태그 만들어 지정해야한다.*/
+    line-height: 1.5;
+    height: 60px;
+}
+
+small {
+    font-size: 100%;
+    /*small태그의 기본 사이즈는 약 85%*/
+    margin:
 }
