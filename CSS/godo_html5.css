@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+/*  전체 설정  */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #000;
+    /*밑줄 등 글자의 장식 제거*/
+}
+
+li {
+    float: left;
+    list-style-type: none;
+}
+
+a:hover {
+    color: crimson;
+}
+
+.left 10 {}
+
+.right 10 {}
+
+
+
+.hidden {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    font: 0;
+    line-height: 0;
+}
+
+
+/*  header  */
+#header {
+    width: 1110px;
+    height: 52px;
+    margin: 40px auto;
+}
+
+
+#logo {
+    width: 253px;
+    height: 52px;
+    background-color: #ff0000;
+}
+
+#gnb {
+    float: right
+}
+
+#gnb li {
+    border-left: 1px solid #ddd
+}
+
+#gnb li.first {
+    border: none;
+}
+
+#gnb a {
+    font-size: 12px;
+}
+
+.left10 a {
+    padding-left: 10px;
+}
+
+.right10 a {
+    padding-right: 10px;
+}
+
+
+/*  주 메뉴  */
+#lnb {
+    width: 100%;
+    height: 40px;
+    display: block;
+    line-height: 40px;
+    /*세로중앙정렬, 높이설정*/
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #000;
+}
+
+#lnb ul {
+    width: 1110px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+#lnb a {
+    display: block;
+    line-height: 40px;
+    padding: 0 15px;
+    font-weight: bold;
+    /*글자 두께*/
+}
+
+
+
+
+/*  본문  */
+#section {
+    width: 100%;
+    border-bottom: 1px solid #000;
+}
+
+#main_banner {
+    width: 100%;
+    height: 393px;
+    border-bottom: 4px solid #000;
+    background-image: url(../images/image_slide_1.jpg);
+    position: center;
+    min-width: 1110px;
+}
+
+.box {
+    margin: 20px auto;
+}
+
+#banner {
+    width: 1110px;
+    height: 130px;
+}
+
+#best {
+    width: 1110px;
+    height: 334px;
+}
+
+#best h3 {
+    height: 30px;
+    font-weight: normal;
+}
+
+.right17 {
+    margin-right: 17px
+}
+
+.right16 {
+    margin-right: 16px
+}
+
+
+/*  footer  */
+#footer {
+    width: 1110px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+footer > div {
+    float: left;
+}
+
+#bottom_logo {
+    width: 253px;
+    height: 90px;
+    margin: 30px;
+}
+
+#footer_right {
+    width: 857px;
+    height: 120px;
+}
+
+
+#fnb {
+    width: 857px;
+    height: 30px;
+}
+
+#fnb a {
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    line-height: 30px;
+}
+
+#address {
+    width: 857px;
+    height: 90px;
+}
+
+#address a {
+    font-weight: bold;
+}
+
+address {
+    font-style: normal;
+    font-size: 12px;
+    line-height: 1.5;
+    height: 60px;
+}
+
+
+small {
+    font-size: 12px;
+}
