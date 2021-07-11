@@ -1,0 +1,683 @@
+@charset "utf-8";
+
+/********* 전체 설정 *********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*영역의 크기에 border와 padding 포함*/
+  color: #555;
+}
+
+li {
+  list-style: none;
+  /*숫자, 점 등 목록 장식 제거*/
+  float: left;
+  /*왼쪽으로 이어붙이기*/
+}
+
+a {
+  text-decoration: none;
+  /*밑줄 등 글자 장식 제거*/
+}
+
+img {
+  vertical-align: top;
+  /*img태그의 기본여백 제거*/
+}
+
+.behind {
+  position: absolute;
+  /*위치값 적용 및 공간을 차지하지 않도록*/
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  /*최소한의 크기로 설정*/
+  left: -10px;
+  top: 0;
+  /*브라우저 영역 바깥으로 이동*/
+  z-index: -1000;
+  /*z값을 가장 낮게*/
+}
+
+.hidden {
+  visibility: hidden;
+  /*시각적으로 보이지 않게*/
+  font-size: 0;
+  line-height: 0;
+  /*글자의 시각적 크기를 0*/
+  width: 0;
+  height: 0;
+  /*영역을 차지하지 않도록*/
+  overflow: hidden;
+  /*추가적인 안전장치(생략가능)*/
+}
+
+/********* header *********/
+header {
+  width: 100%;
+  height: 100px;
+}
+
+#top {
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+#gnb {
+  width: 1090px;
+  height: 30px;
+  margin: auto;
+}
+
+#gnb > nav {
+  height: 30px;
+  float: left;
+}
+
+#gnb a {
+  display: block;
+  line-height: 30px;
+  font-size: 12px;
+}
+
+#gnb1 {
+  width: 790px;
+}
+
+#gnb1 li {
+  border-left: 1px solid #ddd;
+}
+
+#gnb1 li:last-child {
+  border-right: 1px solid #ddd;
+}
+
+#gnb1 a {
+  padding: 0 10px;
+  color: #333;
+}
+
+#gnb1 a:hover {
+  color: #fff;
+  background-color: #ddd;
+}
+
+#gnb2 {
+  width: 300px;
+}
+
+#gnb2 li {
+  width: 150px;
+  text-align: center;
+}
+
+#gnb2 li:first-child {
+  border-right: 1px solid #ddd;
+}
+
+#gnb2 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: #556;
+}
+
+#gnb2 a:hover {
+  background-color: #4484db;
+}
+
+#logo {
+  width: 1090px;
+  height: 70px;
+  margin: 0 auto;
+  /*속성 2개 이상 입력 시: 1.위부터 시계방향 (값이 없는 위치는 대칭복사)*/
+  padding-top: 20px;
+  /*box-sizing: border-box 설정시 padding과 border까지 크기에 포함*/
+
+}
+
+
+
+/********* nav#lnb *********/
+#lnb {
+  width: 100%;
+  height: 40px;
+  background-color: #556;
+  position: relative;
+  /*하위요소인 box의 위치값 기준설정*/
+}
+
+#lnb > ul {
+  width: 1090px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+#lnb > ul > li {
+  width: 182px;
+  text-align: center;
+  position: relative;
+  /*.sub메뉴의 위치 기준*/
+}
+
+/*2개 이상의 선택자를 사용할 때에는 쉼표(,)로 구분*/
+#lnb > ul > li:first-child,
+#lnb > ul > li:last-child {
+  width: 181px;
+}
+
+#lnb a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+#lnb a:hover {
+  background-color: #4484db;
+}
+
+.box {
+  width: 100%;
+  height: 0;
+  background-color: #556;
+  position: absolute;
+  top: 40px;
+  z-index: 1;
+  /*z값 설정: 기본은 0*/
+  /*다음요소인 .slide의 위에 보이도록*/
+}
+
+.sub {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.sub > li {
+  clear: both;
+  /*float:left 제외*/
+  width: 100%;
+}
+
+#lnb .sub > li > a {
+  /*  font-size: 14px;*/
+  font-weight: 200;
+}
+
+#lnb:hover .sub {
+  height: 200px;
+}
+
+
+/********* section *********/
+section {
+  width: 100%;
+}
+
+#main_banner {
+  min-width: 1090px;
+  /*최소사이즈 설정시 기본사이즈는 100%로 자동 설정*/
+  height: 477px;
+  background-color: #4fc97e;
+  overflow: hidden;
+  /*영역을 벗어난 요소는 보이지 않도록*/
+}
+
+.slide {
+  /*넓이는 li의 5배*/
+  /*위치값*/
+  width: 500%;
+  position: relative;
+  left: 0;
+  animation: slider 15s infinite;
+  /*이름 시간 실행횟수*/
+}
+
+/*animation의 이름과 @keyframes의 이름을 동일하게 작성하여 연결*/
+@keyframes slider {
+  0% {
+    left: 0
+  }
+
+  15% {
+    left: 0
+  }
+
+  20% {
+    left: -100%
+  }
+
+  35% {
+    left: -100%
+  }
+
+  40% {
+    left: -200%
+  }
+
+  55% {
+    left: -200%
+  }
+
+  60% {
+    left: -300%
+  }
+
+  75% {
+    left: -300%
+  }
+
+  80% {
+    left: -400%
+  }
+
+  95% {
+    left: -400%
+  }
+}
+
+.slide > li {
+  /*넓이 ul의 1/5*/
+  width: 20%;
+  overflow: hidden;
+}
+
+.slide > li > a {
+  /*크기 image의 실제크기*/
+  display: block;
+  /*크기 적용을 위해 블록태그로 변환*/
+  width: 1709px;
+  height: 477px;
+  /*li의 중앙에 정렬*/
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slide > li > a > img {
+  width: 100%;
+  /*넓이는 a태그에 맞춤*/
+  /*높이는 자동*/
+}
+
+#lnb2 {
+  width: 100%;
+  height: 110px;
+  background-color: #ececee;
+}
+
+#lnb2 ul {
+  width: 1090px;
+  margin: 0 auto;
+}
+
+#lnb2 li {
+  width: 180px;
+  height: 110px;
+  background-image: url(../images/02_snb.jpg);
+}
+
+#lnb2 li:nth-child(1) {
+  background-position: 0 0;
+}
+
+#lnb2 li:nth-child(1):hover {
+  background-position: 0 -110px;
+}
+
+#lnb2 li:nth-child(2) {
+  background-position: -180px 0;
+}
+
+#lnb2 li:nth-child(2):hover {
+  background-position: -180px -110px;
+}
+
+#lnb2 li:nth-child(3) {
+  background-position: -360px 0;
+}
+
+#lnb2 li:nth-child(3):hover {
+  background-position: -360px -110px;
+}
+
+#lnb2 li:nth-child(4) {
+  background-position: -540px 0;
+}
+
+#lnb2 li:nth-child(4):hover {
+  background-position: -540px -110px;
+}
+
+#lnb2 li:nth-child(5) {
+  background-position: -720px 0;
+}
+
+#lnb2 li:nth-child(5):hover {
+  background-position: -720px -110px;
+}
+
+#lnb2 li:nth-child(6) {
+  background-position: -900px 0;
+}
+
+#lnb2 li:nth-child(6):hover {
+  background-position: -900px -110px;
+}
+
+#lnb2 li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-indent: -9999px;
+  /*글자의 시각정보만 왼쪽으로 이동*/
+}
+
+.mar20 {
+  width: 1090px;
+  margin: 20px auto;
+}
+
+#banner {
+  height: 174px;
+}
+
+#banner li {
+  margin-right: 10px;
+}
+
+/*li중에서 (n)번째*/
+#banner li:nth-child(1) {
+  margin-left: 2px;
+}
+
+#banner li:nth-child(4) {
+  margin: 0;
+}
+
+
+
+/*** 서비스 안내 ***/
+#service {
+  overflow: hidden;
+  /*높이 자동 계산*/
+}
+
+#service h3 {
+  font-size: 32px;
+  font-weight: 200;
+  text-align: center;
+  height: 50px;
+}
+
+#service > ul {
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+#service > ul > li {
+  width: 362px;
+}
+
+#service > ul > li:nth-child(2) {
+  width: 364px;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+#service div {
+  height: 200px;
+  position: relative;
+  padding: 40px;
+  cursor: pointer;
+  /*영역의 버튼화*/
+}
+
+#service div:nth-child(1)::after {
+  position: absolute;
+  content: "";
+  width: 304px;
+  height: 1px;
+  background-color: #ddd;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#service div h4 {
+  font-size: 20px;
+  height: 30px;
+}
+
+#service div h4::after {
+  content: ">";
+  position: absolute;
+  right: 40px;
+  color: #ddd;
+}
+
+#service div h5 {
+  font-size: 15px;
+  height: 42px;
+  letter-spacing: -2px;
+}
+
+#service div p {
+  font-size: 12px;
+  line-height: 1.5;
+  width: 170px;
+}
+
+#service .img_box {
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  background-image: url(../images/04_box_back_img.jpg);
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  z-index: -1;
+  /*글자를 가리지 않도록*/
+  text-indent: -9999px;
+  /*글자의 시각적 위치만 이동*/
+}
+
+.box1 .img_box {
+  background-position: 0 0;
+}
+
+.box1:hover .img_box {
+  background-position: -100px 0;
+}
+
+.box2 .img_box {
+  background-position: 0 -300px;
+}
+
+.box2:hover .img_box {
+  background-position: -100px -300px;
+}
+
+.box3 .img_box {
+  background-position: 0 -100px;
+}
+
+.box3:hover .img_box{
+  background-position: -100px -100px;
+}
+
+.box4 .img_box {
+  background-position: 0 -400px;
+}
+
+.box4:hover .img_box {
+  background-position: -100px -400px;
+}
+
+.box5 .img_box {
+  background-position: 0 -200px;
+}
+
+.box5:hover .img_box {
+  background-position: -100px -200px;
+}
+
+.box6 .img_box {
+  background-position: 0 -500px;
+}
+
+.box6:hover .img_box {
+  background-position: -100px -500px;
+}
+
+#sample {
+  overflow: hidden;
+  /*높이 자동 설정 기능*/
+}
+
+
+/*** 대표 쇼핑몰 ***/
+#sample h3 {
+  height: 40px;
+}
+
+#sample ul {
+  text-align: center;
+}
+
+#sample li {
+  width: 170px;
+  height: 100px;
+  background-color: #fff;
+  margin: 0 14px 14px 0;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  /*모퉁이 둥굴리기 - 값을 2개 이상 입력시 왼쪽위부터 시계방향(미입력값은 대칭과 동일)*/
+  overflow: hidden;
+}
+
+#sample li:nth-child(6),
+#sample li:nth-child(12) {
+  margin-right: 0;
+}
+
+#sample a {
+  font-size: 12px;
+}
+
+
+
+/********* footer *********/
+footer {
+  width: 100%;
+  height: 230px;
+  background-color: #222;
+}
+
+#footer_box {
+  width: 1090px;
+  height: 180px;
+  margin: auto;
+}
+
+#footer_box > div {
+  float: left;
+}
+
+#bottom_logo {
+  width: 238px;
+  height: 180px;
+  padding-top: 40px;
+}
+
+#footer_right {
+  width: 852px;
+  height: 180px;
+}
+
+#fnb {
+  width: 852px;
+  height: 50px;
+  border-bottom: 1px solid #ddd;
+}
+
+#fnb a {
+  font-size: 14px;
+  color: #fff;
+  line-height: 50px;
+  padding: 37px;
+  font-weight: bold;
+}
+
+#fnb a:hover {
+  color: #4484db;
+}
+
+#fnb li {
+  position: relative;
+}
+
+#fnb li::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 10px;
+  background-color: #ddd;
+  left: inherit;
+  top: 20px;
+}
+
+#fnb li:first-child::before {
+  content: none;
+}
+
+#fnb li:first-child a {
+  padding-left: 0;
+}
+
+address {
+  width: 852px;
+  height: 100px;
+  color: #ddd;
+  font-style: normal;
+  /*address태그의 기본 설정은 italic*/
+  font-size: 11px;
+  line-height: 1.6;
+  padding-top: 18px;
+}
+
+address a {
+  border: 1px solid #ddd;
+  color: #ddd;
+  display: inline-block;
+  /*크기적용은 블록태그 속성, 정렬기준은 인라인태그 속성*/
+  padding: 1px 5px;
+  background-color: #333;
+}
+
+address a:hover {
+  color: #fff;
+  background-color: #4484db;
+}
+
+#copyright {
+  width: 100%;
+  height: 50px;
+  background-color: #333;
+  text-align: center;
+}
+
+small {
+  color: #ddd;
+  line-height: 50px;
+  font-size: 12px;
+}
